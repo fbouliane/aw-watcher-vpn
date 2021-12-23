@@ -1,0 +1,13 @@
+[Unit]
+Description=OpenVPN watcher for ActivityWatch
+Documentation=
+After=aw-server.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/env aw-watcher-openvpn
+Restart=always
+KillSignal=SIGINT
+
+[Install]
+WantedBy=default.target
